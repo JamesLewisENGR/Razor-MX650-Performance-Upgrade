@@ -85,17 +85,39 @@ Working through those problems gave me experience modifying a real system, testi
 - Troubleshooting
 - Hands-on prototyping and testing
 
-## Project Media
+## Project Videos
 
-I plan to add photos and videos showing the fabrication, installation, testing, and finished bike.
+These videos document different stages of the build, from the initial electrical test through installation, first riding tests, drivetrain troubleshooting, and the completed bike.
 
-### Video Demonstration
+### 1. Pre-Installation Electrical Test
 
-YouTube project video: **Coming soon**
+[Watch the pre-installation electrical test](https://www.youtube.com/shorts/adXzm9Y-ZhQ)
 
-### Build Photos
+After wiring the upgraded electrical components, I tested the system while it was still outside of the bike. I did this before installation to make sure the electrical system and motor were working correctly before mounting everything into the frame.
 
-Project photos: **Coming soon**
+### 2. Components Installed in the Bike
+
+[Watch the post-installation component test](https://www.youtube.com/shorts/GqMGUvGb6VI)
+
+This video shows the electrical components after they were installed into the MX650 frame and how I packaged the system within the available space. I tested the components again after installation. At this point, the chain and final drivetrain setup had not yet been installed.
+
+### 3. First Ride and Initial Performance Feedback
+
+[Watch the first ride](https://www.youtube.com/shorts/6jxUeG4Upig)
+
+This was the first riding test of the upgraded bike. My brother tested it and reported that the speed was good, but the bike had a large amount of torque and the braking performance needed improvement. This test helped identify areas of the build that needed additional work.
+
+### 4. Post-Repair Drivetrain and Stability Test
+
+[Watch the post-repair riding test](https://www.youtube.com/shorts/k4TFucLBT2E)
+
+This test was performed after fixing the chain/drivetrain setup. My brother rode and jumped the bike to put more load on the system and check that the chain remained engaged and that the installed components stayed secure during harder riding.
+
+### 5. Completed Bike Overview
+
+[Watch the completed MX650 overview](https://www.youtube.com/shorts/-amuYUIw6IQ)
+
+This video is a cinematic overview of the completed bike and shows the overall appearance of the finished MX650 build.
 
 ## Future Improvements
 
