@@ -89,9 +89,9 @@ The original wheel bearings were somewhat worn and the brakes were grazing a lit
 
 The gearing change took the bike from around **20 mph with the 9T to 29.2 mph with the 13T**.
 
-### Wheel Torque Estimate
+### Wheel Torque Calculation
 
-I also calculated an estimate for the rear-wheel torque. With the motor rated at 1800 W and 4500 RPM:
+I also wanted to learn how to calculate torque from motor power, RPM, and gearing. With the motor rated at 1800 W and 4500 RPM:
 
 **Angular speed = 4500 × (2π / 60) ≈ 471.2 rad/s**
 
@@ -101,7 +101,9 @@ Then I used the 6.15:1 gear ratio:
 
 **Wheel torque = 3.82 × 6.15 ≈ 23.5 N·m**
 
-That gives about **23.5 N·m at the rear wheel in theory**. The real number would be lower because this calculation does not include losses in the chain and drivetrain.
+This gave me a theoretical value of about **23.5 N·m at the rear wheel**. I did not have a way to directly measure the actual torque the bike was producing, so I could not compare the calculated number to a real measured torque value like I did with top speed.
+
+For me, this calculation was mainly a learning exercise so I could understand how motor power, RPM, and gear ratio are used to estimate torque. It also helped me see how changing the gearing affects the torque available at the wheel.
 
 ### Chain Problems
 
@@ -146,6 +148,8 @@ I changed the brakes and used a larger rotor. The larger rotor gives the brake m
 I originally thought this would mostly be a motor and battery swap. Once I actually started building it, every change seemed to affect something else.
 
 The gearing was probably the part I learned the most from. I started with the 9T sprocket and got around 20 mph. Instead of guessing on the next sprocket, I did the calculation for the 13T and got 30.5 mph. When I tested it, the bike actually did 29.2 mph.
+
+The torque calculation was different because I could not measure the bike's actual wheel torque to check it. I still included it because learning how to calculate torque from power, RPM, and gear ratio was useful and helped me understand the drivetrain better.
 
 I also learned that testing the bike was just as important as putting it together. The chain and brake problems did not really show up until I rode it.
 
@@ -206,5 +210,7 @@ This shows the bike after I finished the build.
 This build ended up being a lot more than putting a bigger motor on a dirt bike. I had to cut and modify parts to make everything fit, solder the wiring, change the gearing, deal with the chain breaking, and improve the brakes.
 
 The part I liked the most was getting the gearing calculation that close to the real test. I calculated **30.5 mph**, and the bike actually went **29.2 mph**.
+
+The torque calculation was more of a learning exercise because I did not have a way to measure the actual wheel torque and compare it with the theoretical number. It still helped me understand how power, RPM, and gearing relate to torque.
 
 The biggest thing I took away from it was that building something is only part of the process. Testing it, finding what does not work, and changing it is where I learned the most.
