@@ -2,114 +2,92 @@
 
 ## Project Overview
 
-This project documents the mechanical and electrical redesign of a Razor MX650 electric dirt bike to significantly increase its performance, durability, and braking capability. The build required component selection, fabrication, drivetrain changes, electrical integration, and troubleshooting to adapt higher-power components to the original frame.
+I upgraded a Razor MX650 electric dirt bike to increase its power and overall performance. The project started as a motor and battery upgrade, but fitting the new components into the stock frame required several mechanical and electrical modifications. I also had to make changes to the drivetrain and brakes as I tested the bike and found problems with the original setup.
 
-The project was completed as a hands-on engineering build focused on applying practical mechanical design and problem-solving skills.
+This project gave me experience working through real fitment, fabrication, drivetrain, electrical, and reliability problems instead of only replacing components.
 
-## Engineering Objectives
-
-- Increase available motor power and overall vehicle performance.
-- Package a larger battery and upgraded electronics within the existing MX650 frame.
-- Modify the frame and motor installation to resolve clearance and fitment constraints.
-- Improve braking performance to better match the increased vehicle speed.
-- Select drivetrain components that balance acceleration, top speed, and durability.
-- Troubleshoot failures encountered during testing and revise the design accordingly.
-
-## Major Upgrades
+## Main Upgrades
 
 | System | Upgrade |
 |---|---|
 | Motor | 48 V, 1800 W brushless motor |
 | Battery | 48 V, 20 Ah battery |
 | Controller | 48 V multivariable controller |
-| Braking | Upgraded brake system with larger rotor |
-| Drivetrain | Modified sprocket/gearing configuration |
-| Chain | Upgraded chain after the smaller original-style chain repeatedly failed under the increased load |
+| Brakes | Upgraded brake system with larger rotor |
+| Drivetrain | Modified gearing configuration |
+| Chain | Upgraded to a stronger chain after the smaller chain repeatedly failed |
 
-## Mechanical Fabrication and Integration
+## Motor Fitment and Fabrication
 
-Several components could not be installed without modifying the original MX650 frame and hardware.
+The upgraded motor did not fit directly into the stock MX650 frame, so I had to modify the setup to make it work.
 
-### Motor Fitment
+I drilled clearance holes where needed so the motor could fit within the frame. The motor also came with a mounting plate that took up too much space, so I removed the plate and used the cylindrical motor body to get the clearance I needed.
 
-The upgraded motor required physical modification for proper installation. Clearance holes were drilled where necessary so the motor could fit within the frame. The original mounting plate attached to the upgraded motor was also removed so that only the cylindrical motor body remained, allowing the motor to fit the available space more effectively.
+This was one of the main fabrication parts of the project because I had to work around the limited space of the original frame while installing a much larger power system.
 
-### Battery Packaging
+## Battery and Controller Installation
 
-The larger 48 V 20 Ah battery required additional space compared with the stock battery system. Portions of the original battery mounting structure were removed or reshaped to create the necessary clearance while retaining the main frame structure.
+The 48 V 20 Ah battery was larger than the stock battery setup. To make room for it, I removed the upper stock battery holder and flattened/removed portions of the lower battery-holder walls that interfered with the new battery.
 
-### Electrical Integration
+The new controller also did not have the correct connector for the battery. I soldered the correct connector onto the controller wiring so the battery and controller could connect properly.
 
-The upgraded controller and battery did not initially use the same connector configuration. The appropriate connector was soldered onto the controller wiring so that the new battery could be connected correctly.
+## Drivetrain and Gearing
 
-This portion of the project required attention to polarity, connection quality, packaging, and strain relief.
+The motor came with two different sprocket options. I chose the smaller motor sprocket based on the performance I wanted from the bike and the gearing available in the setup.
 
-## Drivetrain Design Decisions
+Changing sprocket sizes changes the final drive ratio, which affects wheel torque, acceleration, and top speed. This made gearing an important part of the build rather than simply installing the new motor.
 
-The upgraded motor was supplied with different sprocket options. A smaller motor sprocket was selected to change the final drive ratio toward the desired performance characteristics.
+### Chain Failure and Upgrade
 
-Changing sprocket size changes the relationship between wheel torque and wheel speed. The drivetrain setup was selected with consideration for:
+One problem I found during testing was that the smaller chain I originally used kept breaking under the increased power of the 1800 W motor.
 
-- Motor torque
-- Desired top speed
-- Acceleration
-- Chain loading
-- Available wheel sprocket size
-- Reliability under the increased motor power
-
-During testing, the smaller chain originally used in the setup repeatedly failed under the increased power. The drivetrain was therefore upgraded to a stronger chain, improving durability and demonstrating the need to account for increased transmitted load when power is increased.
+Instead of continuing to replace the same chain, I upgraded to a stronger chain that could better handle the load. This was a useful part of the project because the problem only became obvious after the bike was actually assembled and tested.
 
 ## Brake Upgrade
 
-Because the power upgrade increased the performance capability of the bike, braking performance also needed to be improved.
+Since the upgraded bike was capable of higher performance than the stock MX650, I also upgraded the braking system.
 
-A larger brake rotor was installed. Increasing rotor diameter increases the effective moment arm at which the brake caliper applies force, allowing greater braking torque for the same caliper force.
-
-The approximate relationship is:
+I chose a larger brake rotor to increase braking torque. A larger rotor gives the caliper a larger effective radius to act on, so the same braking force can produce more torque at the wheel.
 
 **Braking torque = braking force × effective rotor radius**
 
-This made the brake upgrade an important supporting modification rather than treating the motor upgrade as an isolated change.
+Upgrading the brakes was important because increasing the bike's power without improving its ability to stop would leave the overall system unbalanced.
 
-## Engineering Challenges
+## Problems I Had to Solve
 
-Key challenges encountered during the project included:
+Some of the main problems I worked through during the build were:
 
-- Packaging larger electrical components inside a frame designed for lower-power hardware.
-- Resolving interference between the upgraded motor and the existing frame.
-- Adapting incompatible electrical connectors.
-- Selecting gearing appropriate for the upgraded power system.
-- Managing the higher mechanical load transmitted through the chain.
-- Improving braking capability to match the increased performance.
+- Fitting a larger motor into the stock frame
+- Creating enough clearance for the larger battery
+- Modifying existing frame and mounting components
+- Connecting the new battery and controller
+- Choosing a gearing setup for the upgraded motor
+- Fixing repeated chain failures caused by the higher power
+- Improving the brakes to match the increased performance
 
-## Iterative Problem Solving
+## What I Learned
 
-One of the most important parts of the project was responding to problems that appeared after assembly and testing.
+The biggest thing I learned from this project was that changing one part of a mechanical system can affect several other parts of the design.
 
-For example, the initial chain configuration was not sufficiently durable for the upgraded power level. Rather than treating the failure as an isolated issue, the drivetrain was revised using a stronger chain better suited to the load. This reflects an iterative engineering process:
+Increasing the motor power did not only require a new motor. It affected battery packaging, controller installation, gearing, chain loading, motor clearance, and braking. Some problems, especially the chain failures, only showed up once I tested the finished bike.
 
-1. Build the system.
-2. Test under operating conditions.
-3. Identify the failure mode.
-4. Determine the underlying cause.
-5. Modify the design.
-6. Retest the improved configuration.
+Working through those problems gave me experience modifying a real system, testing it, finding what was not working, and changing the design until it was more reliable.
 
-## Skills Demonstrated
+## Skills Used
 
 - Mechanical fabrication
 - Electric drivetrain integration
 - Component selection
-- Gear-ratio reasoning
+- Basic gear-ratio analysis
 - Brake-system design considerations
-- Electrical connector modification and soldering
+- Soldering and electrical connections
 - Packaging and clearance problem solving
-- Troubleshooting and design iteration
-- Hands-on prototyping
+- Troubleshooting
+- Hands-on prototyping and testing
 
 ## Project Media
 
-Photos and videos of the build, fabrication process, testing, and final bike will be added here.
+I plan to add photos and videos showing the fabrication, installation, testing, and finished bike.
 
 ### Video Demonstration
 
@@ -121,18 +99,18 @@ Project photos: **Coming soon**
 
 ## Future Improvements
 
-Possible future engineering work could include:
+Some things I would like to document or improve further include:
 
-- Documenting the exact motor and wheel sprocket tooth counts and calculating the final drive ratio.
-- Measuring vehicle speed and acceleration before and after the upgrade.
-- Estimating wheel torque from motor torque and gear ratio.
-- Evaluating battery range and power consumption.
-- Measuring braking distance after the rotor upgrade.
-- Creating CAD models or brackets for cleaner component mounting.
-- Improving wiring organization and component protection.
+- Record the exact motor and wheel sprocket tooth counts and calculate the final drive ratio
+- Measure top speed and acceleration
+- Estimate wheel torque using the motor torque and gear ratio
+- Measure battery range and power consumption
+- Measure braking distance with the upgraded brake setup
+- Improve wiring organization and component protection
+- Design cleaner mounting components in CAD
 
 ## Portfolio Takeaway
 
-This project demonstrates the process of upgrading a real mechanical system where increased performance in one subsystem creates new requirements elsewhere. Increasing motor power affected component packaging, drivetrain loading, gearing, electrical integration, and braking requirements.
+This project gave me hands-on experience modifying and troubleshooting a real electromechanical system. What started as a power upgrade required me to solve problems involving fabrication, component fitment, drivetrain loading, gearing, electrical connections, and braking.
 
-The project strengthened my understanding of how mechanical and electrical design decisions interact and showed the importance of testing, identifying failure modes, and iterating toward a more reliable design.
+The project helped me better understand how individual design decisions affect an entire mechanical system and why testing and redesign are important parts of engineering.
