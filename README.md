@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-I upgraded a Razor MX650 electric dirt bike to increase its power and overall performance. The project started as a motor and battery upgrade, but fitting the new components into the stock frame required several mechanical and electrical modifications. I also had to make changes to the drivetrain and brakes as I tested the bike and found problems with the original setup.
+I upgraded a Razor MX650 electric dirt bike because I wanted it to have more power and a higher top speed than the stock setup. I started by replacing the motor, battery, and controller, but the project ended up requiring a lot more work than just swapping parts.
 
-This project gave me experience working through real fitment, fabrication, drivetrain, electrical, and reliability problems instead of only replacing components.
+The larger components did not fit the stock frame without modifications, and once I started riding the bike I ran into problems with the gearing, chain, and brakes. I had to work through each problem and change the setup as I tested it.
 
 ## Main Upgrades
 
@@ -13,39 +13,37 @@ This project gave me experience working through real fitment, fabrication, drive
 | Motor | 48 V, 1800 W brushless motor |
 | Battery | 48 V, 20 Ah battery |
 | Controller | 48 V multivariable controller |
-| Brakes | Upgraded brake system with larger rotor |
+| Brakes | Upgraded brakes with a larger rotor |
 | Drivetrain | 13T motor sprocket / 80T rear sprocket |
-| Chain | Upgraded to a stronger chain after the smaller chain repeatedly failed |
+| Chain | Upgraded to a stronger chain after the smaller chain kept breaking |
 
 ## Motor Fitment and Fabrication
 
-The upgraded motor did not fit directly into the stock MX650 frame, so I had to modify the setup to make it work.
+The new motor was much larger than the stock motor and did not fit directly into the MX650 frame.
 
-I drilled clearance holes where needed so the motor could fit within the frame. The motor also came with a mounting plate that took up too much space, so I removed the plate and used the cylindrical motor body to get the clearance I needed.
-
-This was one of the main fabrication parts of the project because I had to work around the limited space of the original frame while installing a much larger power system.
+I drilled clearance holes where I needed them to get the motor to fit. The motor also came with a mounting plate that took up too much room, so I cut the plate off and used the cylindrical motor body by itself. This gave me the extra clearance I needed inside the frame.
 
 ## Battery and Controller Installation
 
-The 48 V 20 Ah battery was larger than the stock battery setup. To make room for it, I removed the upper stock battery holder and flattened/removed portions of the lower battery-holder walls that interfered with the new battery.
+The 48 V 20 Ah battery was also much larger than the stock battery setup. I removed the upper stock battery holder to make room for it and flattened parts of the lower battery-holder walls that were in the way.
 
-The new controller also did not have the correct connector for the battery. I soldered the correct connector onto the controller wiring so the battery and controller could connect properly.
+The controller did not come with the right connector for my battery, so I soldered the correct connector onto the controller wiring so everything could connect properly.
 
 ## Drivetrain and Gearing
 
-The upgraded motor came with different sprocket options, so gearing became an important part of getting the performance I wanted from the bike. Changing the motor sprocket changes the final drive ratio, which affects wheel torque, acceleration, and top speed.
+The motor came with different sprocket options. I learned pretty quickly that the sprocket size made a big difference in how the bike actually rode.
 
-### Initial 9T Sprocket Test
+### First Setup - 9T Sprocket
 
-I initially ran a **9-tooth motor sprocket with the 80-tooth rear sprocket**. During the first riding test, my brother reported that the bike had more torque than necessary. The bike reached approximately **20 mph**, which was only about a **5 mph increase** over the roughly **15 mph stock top speed** I had before the upgrades.
+I first used a **9T motor sprocket with the 80T rear sprocket**. When my brother tested the bike, he said it had a lot of torque, but the top speed was only around **20 mph**. The stock bike went around **15 mph**, so after all of the upgrades I was only gaining about 5 mph.
 
-That test showed me that simply having more motor power did not automatically give me the performance I wanted. The 9T sprocket provided a large gear reduction and strong wheel torque, but it limited the bike's top speed.
+I wanted to keep good acceleration but get the bike closer to 30 mph, so I decided to change the gearing instead of leaving the 9T sprocket on it.
 
-### Engineering Analysis and 13T Sprocket Selection
+### Choosing the 13T Sprocket
 
-Instead of selecting another sprocket at random, I used the motor RPM, rear tire diameter, and sprocket ratio to estimate what gearing would put the bike near my target speed of about 30 mph.
+Instead of just trying different sprockets until one worked, I used the motor RPM, sprocket sizes, and rear tire diameter to figure out what would get me close to the speed I wanted.
 
-For the final setup I used:
+My final setup was:
 
 | Parameter | Value |
 |---|---:|
@@ -54,168 +52,160 @@ For the final setup I used:
 | Rear sprocket | 80T |
 | Rear tire diameter | 14 in |
 
-The final drive ratio is:
+I calculated the gear ratio using:
 
-**Final drive ratio = rear sprocket teeth / motor sprocket teeth**
+**Gear ratio = 80 / 13 = 6.15:1**
 
-**Final drive ratio = 80 / 13 = 6.15:1**
+That means the motor turns about 6.15 times for every one turn of the rear wheel.
 
-At 4500 motor RPM, the theoretical rear-wheel speed is:
+At 4500 motor RPM:
 
 **Wheel RPM = 4500 / 6.15 ≈ 731 RPM**
 
-Using the 14-inch tire diameter, the calculated theoretical top speed was **30.5 mph**.
+Using the 14-inch rear tire, the calculated top speed came out to **30.5 mph**.
 
 ### Top Speed Calculation
 
 ![Top speed gear ratio calculation](Gear%20calculation%20for%20razor%20mx650%20by%20best-calculators.com.png)
 
-The calculator gave a theoretical top speed of **30.5 mph** using 4500 RPM, a 14-inch tire diameter, and an overall ratio of 6.15:1.
+The calculator also gave me **30.5 mph** using the 4500 RPM motor speed, 14-inch tire, and 6.15 gear ratio.
 
-### Testing and Validation
+### Actual Speed Test
 
-After installing the **13T motor sprocket**, I performed another speed test. The bike reached a measured top speed of **29.2 mph**, compared with the theoretical prediction of **30.5 mph**.
+After putting the **13T sprocket** on the bike, I tested the top speed and got **29.2 mph**. That was very close to the 30.5 mph I calculated.
 
-The measured result was about **4.3% lower than the theoretical value**. The theoretical calculation assumes ideal conditions and does not account for mechanical losses. On my bike, the original wheel bearings were somewhat worn, and I also noticed slight brake contact that added rolling resistance. These losses likely contributed to the difference between the calculated and measured speeds.
+The bike did not hit the exact calculated speed, but there were a couple things working against it. The original wheel bearings were somewhat worn and the brakes were slightly grazing, which added resistance.
 
-This gave me a useful theory-versus-test comparison: changing from the 9T to the calculated 13T sprocket moved the bike from approximately **20 mph to 29.2 mph**, while the calculated target was **30.5 mph**.
+Going from the 9T to the 13T sprocket took the bike from around **20 mph to 29.2 mph**, so this ended up being one of the biggest improvements I made to the build.
 
-### Theoretical Wheel Torque
+### Wheel Torque Estimate
 
-I also estimated the wheel torque produced by the final drivetrain setup. Using the motor's rated power of **1800 W** and rated speed of **4500 RPM**, I first estimated motor torque.
+I also wanted to get an idea of how much torque the drivetrain was putting at the rear wheel. Using the 1800 W motor rating and 4500 RPM, I first estimated the motor torque.
 
 **Angular speed = 4500 × (2π / 60) ≈ 471.2 rad/s**
 
-**Motor torque = Power / Angular speed**
-
 **Motor torque = 1800 / 471.2 ≈ 3.82 N·m**
 
-Applying the **6.15:1 final drive ratio** gives an ideal theoretical wheel torque of:
+I then used my 6.15:1 gear ratio:
 
 **Wheel torque = 3.82 × 6.15 ≈ 23.5 N·m**
 
-This is an ideal estimate based on the motor producing 1800 W at 4500 RPM. Actual wheel torque would be somewhat lower at that operating point because of drivetrain losses such as chain friction, bearing friction, and other mechanical losses.
+So the calculated wheel torque is about **23.5 N·m** at that motor operating point. The actual amount at the wheel would be a little lower because some power is lost through the chain, bearings, and other parts of the drivetrain.
 
-### Chain Failure and Upgrade
+### Chain Problems
 
-Another problem I found during testing was that the smaller chain I originally used kept breaking under the increased power of the 1800 W motor.
+One of the problems I ran into after getting the bike running was the chain. The smaller chain I originally used kept breaking with the more powerful motor.
 
-Instead of continuing to replace the same chain, I upgraded to a stronger chain that could better handle the load. This was a useful part of the project because the problem only became obvious after the bike was actually assembled and tested.
+After it happened multiple times, I switched to a stronger chain instead of continuing to replace the same smaller one. After changing the chain and fixing the drivetrain setup, I tested the bike again to make sure the chain would stay on and the components stayed secure.
 
 ## Battery Range and Energy Use
 
-The upgraded battery is rated at **48 V and 20 Ah**, giving a nominal energy capacity of:
+My battery is **48 V and 20 Ah**, so I calculated its rated energy capacity as:
 
-**Battery energy = Voltage × Capacity**
+**48 V × 20 Ah = 960 Wh**
 
-**Battery energy = 48 V × 20 Ah = 960 Wh**
+I got about **13.6 miles** during my range test.
 
-During range testing, I measured approximately **13.6 miles** of riding from the battery.
+Using the rated battery capacity:
 
-Using the nominal battery capacity, I estimated the energy consumption as:
+**960 Wh / 13.6 miles ≈ 70.6 Wh/mile**
 
-**Energy consumption = 960 Wh / 13.6 mi ≈ 70.6 Wh/mi**
-
-The **70.6 Wh/mi** value is an estimate based on the battery's nominal 960 Wh capacity rather than a direct measurement of watt-hours removed from the pack. Actual energy use can vary with riding speed, acceleration, terrain, rider weight, tire pressure, and drivetrain losses.
+So the bike used an estimated **70.6 Wh/mile** during that test. This is not an exact measurement because I used the battery's rated 960 Wh capacity instead of measuring the exact amount of energy pulled from the battery, but it gave me a useful estimate of the bike's energy use.
 
 ## Brake Upgrade
 
-Since the upgraded bike was capable of higher performance than the stock MX650, I also upgraded the braking system.
+The first riding test also showed that the stock braking setup was not good enough for the faster bike. My brother even pointed out the braking problem during the first test ride.
 
-I chose a larger brake rotor to increase braking torque. A larger rotor gives the caliper a larger effective radius to act on, so the same braking force can produce more torque at the wheel.
+I upgraded the brakes and went with a larger rotor. I chose the larger rotor because moving the braking force farther away from the center of the wheel increases the braking torque.
 
 **Braking torque = braking force × effective rotor radius**
 
-Upgrading the brakes was important because increasing the bike's power without improving its ability to stop would leave the overall system unbalanced.
+Since I was making the bike faster, I wanted the braking system to improve along with the power and speed.
 
 ## Problems I Had to Solve
 
-Some of the main problems I worked through during the build were:
+Some of the main problems I ran into were:
 
-- Fitting a larger motor into the stock frame
-- Creating enough clearance for the larger battery
-- Modifying existing frame and mounting components
-- Connecting the new battery and controller
-- Testing the 9T gearing and identifying that it produced more torque than I wanted
-- Calculating and selecting a 13T motor sprocket for a higher target speed
-- Comparing theoretical top speed with the measured result
-- Estimating wheel torque from motor power, RPM, and drivetrain ratio
-- Measuring range and estimating energy consumption
-- Fixing repeated chain failures caused by the higher power
-- Improving the brakes to match the increased performance
+- Getting the larger motor to fit inside the stock frame
+- Making enough room for the larger battery
+- Modifying the stock mounting pieces
+- Wiring the new battery and controller together
+- Having too much torque and not enough speed with the 9T sprocket
+- Choosing a better sprocket size for my target speed
+- Repeatedly breaking the smaller chain
+- Improving the brakes for the higher speed
+- Finding the difference between my calculated and actual top speed
 
 ## What I Learned
 
-The biggest thing I learned from this project was that changing one part of a mechanical system can affect several other parts of the design.
+The biggest thing I learned from this build was how changing one part can create problems somewhere else.
 
-Increasing the motor power did not only require a new motor. It affected battery packaging, controller installation, gearing, chain loading, motor clearance, braking, and energy consumption. Some problems, especially the chain failures and the gearing characteristics, only showed up once I tested the finished bike.
+I originally thought the project would mainly be installing a bigger motor and battery. Once I actually started building and testing it, the extra power affected the motor fitment, battery placement, gearing, chain, and brakes.
 
-The drivetrain was a good example of this. My initial 9T sprocket gave the bike strong torque but only about a 20 mph top speed. I used the drivetrain dimensions and motor speed to select a 13T sprocket, calculated a theoretical top speed of 30.5 mph, and then measured 29.2 mph during testing. I also estimated approximately **23.5 N·m of ideal wheel torque at the rated 4500 RPM operating point** and used my range test to estimate approximately **70.6 Wh/mi** of energy consumption.
+The gearing was probably the best example. The 9T sprocket gave me a lot of torque but only around 20 mph. I used the measurements from my setup to choose the 13T sprocket, calculated about 30.5 mph, and then got 29.2 mph when I actually tested it.
 
-Working through those problems gave me experience modifying a real system, testing it, analyzing the results, and changing the design until the performance was closer to what I wanted.
+I learned a lot more from fixing the problems that came up during testing than I would have from just installing parts that worked the first time.
 
 ## Skills Used
 
 - Mechanical fabrication
-- Electric drivetrain integration
+- Electric drivetrain installation
 - Component selection
-- Gear-ratio and theoretical speed analysis
-- Motor and wheel torque estimation
-- Battery energy and range analysis
-- Experimental testing and validation
-- Brake-system design considerations
+- Gear-ratio calculations
+- Motor and wheel torque calculations
+- Battery and range calculations
+- Testing and troubleshooting
+- Brake-system improvements
 - Soldering and electrical connections
 - Packaging and clearance problem solving
-- Troubleshooting
-- Hands-on prototyping and testing
 
 ## Project Videos
 
-These videos document different stages of the build, from the initial electrical test through installation, first riding tests, drivetrain troubleshooting, and the completed bike.
+These videos show different stages of the build and testing.
 
 ### 1. Pre-Installation Electrical Test
 
 [Watch the pre-installation electrical test](https://www.youtube.com/shorts/adXzm9Y-ZhQ)
 
-After wiring the upgraded electrical components, I tested the system while it was still outside of the bike. I did this before installation to make sure the electrical system and motor were working correctly before mounting everything into the frame.
+After I wired the new electrical components, I tested everything while it was still outside of the bike. I wanted to make sure the motor, controller, and wiring worked before I went through the work of installing everything into the frame.
 
 ### 2. Components Installed in the Bike
 
 [Watch the post-installation component test](https://www.youtube.com/shorts/GqMGUvGb6VI)
 
-This video shows the electrical components after they were installed into the MX650 frame and how I packaged the system within the available space. I tested the components again after installation. At this point, the chain and final drivetrain setup had not yet been installed.
+This shows the components after I installed them into the bike and where I was able to fit everything inside the frame. At this point I had not installed the chain and final drivetrain setup yet.
 
-### 3. First Ride — 9T Sprocket Test
+### 3. First Ride - 9T Sprocket
 
 [Watch the first ride](https://www.youtube.com/shorts/6jxUeG4Upig)
 
-This was the first riding test of the upgraded bike with the **9T motor sprocket**. My brother reported that the bike had a large amount of torque and that the braking performance needed improvement. The bike reached approximately **20 mph** with this gearing. This test helped show that I needed to change the gearing as well as improve the brakes.
+This was the first riding test with the **9T motor sprocket**. My brother tested it and pointed out that it had a lot of torque but the brakes needed work. The bike was going around **20 mph** with this setup. This test is what made me start looking at changing the gearing and improving the brakes.
 
-### 4. Post-Repair Drivetrain and Stability Test
+### 4. Drivetrain Test After Repairs
 
 [Watch the post-repair riding test](https://www.youtube.com/shorts/k4TFucLBT2E)
 
-This test was performed after fixing the chain/drivetrain setup. My brother rode and jumped the bike to put more load on the system and check that the chain remained engaged and that the installed components stayed secure during harder riding.
+This was after I fixed the chain and drivetrain problems. My brother rode and jumped the bike to put more load on it and make sure the chain stayed on and everything I installed stayed secure.
 
-### 5. Completed Bike Overview
+### 5. Finished Bike
 
 [Watch the completed MX650 overview](https://www.youtube.com/shorts/-amuYUIw6IQ)
 
-This video is a cinematic overview of the completed bike and shows the overall appearance of the finished MX650 build.
+This is an overview of what the bike looked like when I finished the build.
 
 ## Future Improvements
 
-Some things I would like to document or improve further include:
+There are still a few things I could improve or test later:
 
-- Measure acceleration under controlled conditions
-- Measure braking distance with the upgraded brake setup
-- Improve wiring organization and component protection
-- Design cleaner mounting components in CAD
+- Measure acceleration
+- Measure braking distance
+- Clean up and protect the wiring more
+- Design cleaner mounting parts in SolidWorks
 
 ## Portfolio Takeaway
 
-This project gave me hands-on experience modifying and troubleshooting a real electromechanical system. What started as a power upgrade required me to solve problems involving fabrication, component fitment, drivetrain loading, gearing, electrical connections, braking, energy use, and performance testing.
+This project started as an upgrade to make my MX650 faster, but it turned into a lot of problem solving. I had to modify the frame setup, fit larger electrical components, solder wiring, change the gearing, fix chain problems, and upgrade the brakes.
 
-One of the most useful parts of the project was being able to use calculations to make design decisions and then compare predictions with real testing. The calculated top speed with the final gearing was **30.5 mph**, and the bike reached **29.2 mph** during testing. I also used the drivetrain specifications to estimate wheel torque and used measured range to estimate the bike's energy consumption.
+My favorite part of the project was the gearing change because I was able to calculate what I thought the bike would do and then test it. I calculated **30.5 mph** with the 13T sprocket and the bike actually reached **29.2 mph**.
 
-The project helped me better understand how individual design decisions affect an entire mechanical system and why calculation, testing, and redesign are important parts of engineering.
+This project gave me hands-on experience building something, finding problems through testing, and then making changes to improve it.
