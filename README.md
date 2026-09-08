@@ -6,6 +6,21 @@ I upgraded a Razor MX650 electric dirt bike because I wanted it to have more pow
 
 The larger components did not fit the stock frame without modifications, and once I started riding the bike I ran into problems with the gearing, chain, and brakes. I had to work through each problem and change the setup as I tested it.
 
+## Stock vs. Upgraded
+
+| | Stock MX650 | My Upgraded MX650 | Change |
+|---|---:|---:|---:|
+| Motor power | 650 W | 1800 W | **+177%** |
+| Battery voltage | 36 V | 48 V | **+33%** |
+| Battery capacity | 12 Ah | 20 Ah | **+67%** |
+| Battery energy | 432 Wh | 960 Wh | **+122%** |
+| Top speed | ~15 mph* | 29.2 mph measured | **+95%** |
+| Rear tire | 14 in | 14 in | Same |
+
+\*My bike went around 15 mph before the upgrades. Razor rates a stock MX650 at up to 17 mph.
+
+The biggest change was the motor, going from the stock **650 W motor to 1800 W**, which is about **2.8 times the rated power**. The new battery also has more than double the rated energy capacity. My measured top speed went from around **15 mph before the build to 29.2 mph after the upgrades**, almost doubling the speed.
+
 ## Main Upgrades
 
 | System | Upgrade |
