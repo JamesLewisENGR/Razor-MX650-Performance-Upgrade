@@ -80,11 +80,43 @@ The measured result was about **4.3% lower than the theoretical value**. The the
 
 This gave me a useful theory-versus-test comparison: changing from the 9T to the calculated 13T sprocket moved the bike from approximately **20 mph to 29.2 mph**, while the calculated target was **30.5 mph**.
 
+### Theoretical Wheel Torque
+
+I also estimated the wheel torque produced by the final drivetrain setup. Using the motor's rated power of **1800 W** and rated speed of **4500 RPM**, I first estimated motor torque.
+
+**Angular speed = 4500 × (2π / 60) ≈ 471.2 rad/s**
+
+**Motor torque = Power / Angular speed**
+
+**Motor torque = 1800 / 471.2 ≈ 3.82 N·m**
+
+Applying the **6.15:1 final drive ratio** gives an ideal theoretical wheel torque of:
+
+**Wheel torque = 3.82 × 6.15 ≈ 23.5 N·m**
+
+This is an ideal estimate based on the motor producing 1800 W at 4500 RPM. Actual wheel torque would be somewhat lower at that operating point because of drivetrain losses such as chain friction, bearing friction, and other mechanical losses.
+
 ### Chain Failure and Upgrade
 
 Another problem I found during testing was that the smaller chain I originally used kept breaking under the increased power of the 1800 W motor.
 
 Instead of continuing to replace the same chain, I upgraded to a stronger chain that could better handle the load. This was a useful part of the project because the problem only became obvious after the bike was actually assembled and tested.
+
+## Battery Range and Energy Use
+
+The upgraded battery is rated at **48 V and 20 Ah**, giving a nominal energy capacity of:
+
+**Battery energy = Voltage × Capacity**
+
+**Battery energy = 48 V × 20 Ah = 960 Wh**
+
+During range testing, I measured approximately **13.6 miles** of riding from the battery.
+
+Using the nominal battery capacity, I estimated the energy consumption as:
+
+**Energy consumption = 960 Wh / 13.6 mi ≈ 70.6 Wh/mi**
+
+The **70.6 Wh/mi** value is an estimate based on the battery's nominal 960 Wh capacity rather than a direct measurement of watt-hours removed from the pack. Actual energy use can vary with riding speed, acceleration, terrain, rider weight, tire pressure, and drivetrain losses.
 
 ## Brake Upgrade
 
@@ -107,6 +139,8 @@ Some of the main problems I worked through during the build were:
 - Testing the 9T gearing and identifying that it produced more torque than I wanted
 - Calculating and selecting a 13T motor sprocket for a higher target speed
 - Comparing theoretical top speed with the measured result
+- Estimating wheel torque from motor power, RPM, and drivetrain ratio
+- Measuring range and estimating energy consumption
 - Fixing repeated chain failures caused by the higher power
 - Improving the brakes to match the increased performance
 
@@ -114,9 +148,9 @@ Some of the main problems I worked through during the build were:
 
 The biggest thing I learned from this project was that changing one part of a mechanical system can affect several other parts of the design.
 
-Increasing the motor power did not only require a new motor. It affected battery packaging, controller installation, gearing, chain loading, motor clearance, and braking. Some problems, especially the chain failures and the gearing characteristics, only showed up once I tested the finished bike.
+Increasing the motor power did not only require a new motor. It affected battery packaging, controller installation, gearing, chain loading, motor clearance, braking, and energy consumption. Some problems, especially the chain failures and the gearing characteristics, only showed up once I tested the finished bike.
 
-The drivetrain was a good example of this. My initial 9T sprocket gave the bike strong torque but only about a 20 mph top speed. I used the drivetrain dimensions and motor speed to select a 13T sprocket, calculated a theoretical top speed of 30.5 mph, and then measured 29.2 mph during testing.
+The drivetrain was a good example of this. My initial 9T sprocket gave the bike strong torque but only about a 20 mph top speed. I used the drivetrain dimensions and motor speed to select a 13T sprocket, calculated a theoretical top speed of 30.5 mph, and then measured 29.2 mph during testing. I also estimated approximately **23.5 N·m of ideal wheel torque at the rated 4500 RPM operating point** and used my range test to estimate approximately **70.6 Wh/mi** of energy consumption.
 
 Working through those problems gave me experience modifying a real system, testing it, analyzing the results, and changing the design until the performance was closer to what I wanted.
 
@@ -126,6 +160,8 @@ Working through those problems gave me experience modifying a real system, testi
 - Electric drivetrain integration
 - Component selection
 - Gear-ratio and theoretical speed analysis
+- Motor and wheel torque estimation
+- Battery energy and range analysis
 - Experimental testing and validation
 - Brake-system design considerations
 - Soldering and electrical connections
@@ -172,16 +208,14 @@ This video is a cinematic overview of the completed bike and shows the overall a
 Some things I would like to document or improve further include:
 
 - Measure acceleration under controlled conditions
-- Estimate wheel torque using the motor torque and gear ratio
-- Measure battery range and power consumption
 - Measure braking distance with the upgraded brake setup
 - Improve wiring organization and component protection
 - Design cleaner mounting components in CAD
 
 ## Portfolio Takeaway
 
-This project gave me hands-on experience modifying and troubleshooting a real electromechanical system. What started as a power upgrade required me to solve problems involving fabrication, component fitment, drivetrain loading, gearing, electrical connections, braking, and performance testing.
+This project gave me hands-on experience modifying and troubleshooting a real electromechanical system. What started as a power upgrade required me to solve problems involving fabrication, component fitment, drivetrain loading, gearing, electrical connections, braking, energy use, and performance testing.
 
-One of the most useful parts of the project was being able to use a calculation to make a design change and then compare the prediction with a real test. The calculated top speed with the final gearing was **30.5 mph**, and the bike reached **29.2 mph** during testing.
+One of the most useful parts of the project was being able to use calculations to make design decisions and then compare predictions with real testing. The calculated top speed with the final gearing was **30.5 mph**, and the bike reached **29.2 mph** during testing. I also used the drivetrain specifications to estimate wheel torque and used measured range to estimate the bike's energy consumption.
 
 The project helped me better understand how individual design decisions affect an entire mechanical system and why calculation, testing, and redesign are important parts of engineering.
